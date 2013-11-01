@@ -1,6 +1,6 @@
 name             'uru'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Evan Machnic'
+maintainer_email 'emachnic@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures uru'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
