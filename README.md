@@ -1,23 +1,14 @@
 uru Cookbook
 ============
-TODO: Enter the cookbook description here.
 
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+This cookbook installs Uru, which is a cross-platform Ruby switcher. Uru runs
+on Windows, Mac, or Linux.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - uru needs toaster to brown your bagel.
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
-
-e.g.
 #### uru::default
 <table>
   <tr>
@@ -36,10 +27,6 @@ e.g.
 
 Usage
 -----
-#### uru::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
 Just include `uru` in your node's `run_list`:
 
 ```json
@@ -53,9 +40,7 @@ Just include `uru` in your node's `run_list`:
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write you change
@@ -65,4 +50,4 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Evan Machnic
