@@ -3,3 +3,7 @@ source 'https://rubygems.org'
 gem 'berkshelf'
 gem 'test-kitchen', '~> 1.0.0.alpha.3', group: :integration
 gem 'kitchen-vagrant', group: :integration
+gem 'chefspec', '~> 3.0'
+gem 'vagrant-wrapper', group: :integration
+gem 'busser-minitest'
+gem 'foodcritic'
