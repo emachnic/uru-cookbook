@@ -6,3 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+if platform?('debian', 'ubuntu')
+  include_recipe 'uru::unix'
+end
