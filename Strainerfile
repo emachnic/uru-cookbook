@@ -1,1 +1,1 @@
-chefspec:   bundle exec rspec -f documentation
+chefspec:   bundle exec rspec -f documentation --color
