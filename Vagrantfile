@@ -76,12 +76,14 @@ Vagrant.configure("2") do |config|
         :server_root_password => 'rootpass',
         :server_debian_password => 'debpass',
         :server_repl_password => 'replpass'
+      },
+      uru: {
+        username: 'vagrant'
       }
     }
 
     chef.run_list = [
-        "recipe[minitest-handler]",
-        "recipe[uru]",
+        "recipe[uru]"
     ]
   end
 end

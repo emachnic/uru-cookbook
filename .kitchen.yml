@@ -25,4 +25,8 @@ suites:
 - name: default
   run_list:
   - recipe[uru]
-  attributes: {}
+  attributes: {
+    uru: {
+      username: 'vagrant'
+    }
+  }
