@@ -1,1 +1,1 @@
-chefspec:   bundle exec rspec
+chefspec:   bundle exec rspec -f documentation

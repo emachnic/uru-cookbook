@@ -14,8 +14,8 @@ end
 case node['platform_family']
 when 'debian', 'rhel'
   include_recipe 'uru::unix'
-when 'mac-os-x'
-  # include_recipe 'uru::mac'
+when 'mac_os_x'
+  include_recipe 'uru::mac'
 when 'windows'
-  # include_recipe 'uru::windows'
+  include_recipe 'uru::windows'
 end
