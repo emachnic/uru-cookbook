@@ -4,6 +4,10 @@ uru Cookbook
 This cookbook installs Uru, which is a cross-platform Ruby switcher. Uru runs
 on Windows, Mac, or Linux.
 
+## CI
+
+[![Build Status](https://travis-ci.org/emachnic/uru-cookbook.png)](https://travis-ci.org/emachnic/uru-cookbook?branch=master)
+
 Requirements
 ------------
 
