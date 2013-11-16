@@ -13,9 +13,7 @@ describe 'uru::install' do
     context 'success' do
 
       before do
-        stub_command("cat #{ENV['HOME']}/.bash_profile").and_return(true)
-        stub_command("grep").and_return(false)
-        stub_command("eval \"$(uru_rt admin install)\"\n").and_return(false)
+        stub_command("cat #{ENV['HOME']}/.bash_profile | grep 'eval \"$(uru_rt admin install)\"'").and_return(false)
       end
     
       it 'runs the install_uru bash script' do
@@ -27,9 +25,7 @@ describe 'uru::install' do
     context 'failure' do
 
       before do
-        stub_command("cat #{ENV['HOME']}/.bash_profile").and_return(true)
-        stub_command("grep").and_return(true)
-        stub_command("eval \"$(uru_rt admin install)\"\n").and_return(true)
+        stub_command("cat #{ENV['HOME']}/.bash_profile | grep 'eval \"$(uru_rt admin install)\"'").and_return(true)
       end
 
       it "doesn't run the install_uru bash script" do

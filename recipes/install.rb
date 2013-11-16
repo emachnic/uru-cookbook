@@ -7,5 +7,5 @@ bash 'install_uru' do
     source #{ENV['HOME']}/.bash_profile
     EOH
   action :run
-  not_if `cat #{ENV['HOME']}/.bash_profile | grep 'eval "$(uru_rt admin install)"'`
+  not_if "cat #{ENV['HOME']}/.bash_profile | grep 'eval \"$(uru_rt admin install)\"'"
 end
