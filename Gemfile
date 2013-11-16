@@ -7,3 +7,4 @@ gem 'chefspec', '~> 3.0'
 gem 'vagrant-wrapper', group: :integration
 gem 'busser-minitest'
 gem 'foodcritic'
+gem 'strainer'
