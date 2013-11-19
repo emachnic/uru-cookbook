@@ -4,9 +4,8 @@ describe 'uru::unix' do
 
   let(:chef_run) do
     ChefSpec::Runner.new(platform: 'ubuntu', version: '12.04') do |node|
-      node.set['uru']['extract_path'] = '/home/vagrant/bin'
-      node.set['uru']['src_url']      = 'https://bitbucket.org/jonforums/uru/downloads/'
-      node.set['uru']['src_filename'] = 'uru-0.6.3-78eeabd-linux-x86.tar.gz'
+      node.set['uru']['username'] = 'vagrant'
+      node.set['uru']['src_filename'] = 'uru-0.6.4--linux-x86.tar.gz'
     end.converge(described_recipe)
   end
 

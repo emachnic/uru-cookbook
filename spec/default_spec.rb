@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe 'uru::default' do
 
+  before do
+    stub_command("cat .bash_profile | grep 'eval \"$(uru_rt admin install)\"'").and_return(false)
+  end
+
   context 'upgrade' do
 
     let(:chef_run) do
@@ -61,7 +65,7 @@ describe 'uru::default' do
     let(:chef_run) do
       ChefSpec::Runner.new(platform: 'windows', version: '2008R2').converge(described_recipe)
     end
-
+    
     it 'includes the windows recipe' do
       expect(chef_run).to include_recipe('uru::windows')
     end

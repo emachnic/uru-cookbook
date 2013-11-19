@@ -19,13 +19,61 @@ Attributes
     <th>Key</th>
     <th>Type</th>
     <th>Description</th>
+    <th>Acceptable Values</th>
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['uru']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['uru']['username']</tt></td>
+    <td>String</td>
+    <td>Username that Uru will run under</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><tt>['uru']['action']</tt></td>
+    <td>String</td>
+    <td>Way to run the cookbook.</td>
+    <td><tt>install</tt>, <tt>upgrade</tt></td>
+    <td><tt>install</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['uru']['version']</tt></td>
+    <td>String</td>
+    <td>Version of Uru to install</td>
+    <td></td>
+    <td><tt>0.6.4</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['uru']['src_url']</tt></td>
+    <td>String</td>
+    <td>Base URL for Uru downloads</td>
+    <td></td>
+    <td><tt>http://downloads.sourceforge.net/project/urubinaries/uru/#{node['uru']['version']}/</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['uru']['src_filename']</tt></td>
+    <td>String</td>
+    <td>Filename of the Uru binary package</td>
+    <td></td>
+    <td><tt>uru-#{node['uru']['version']}-#{platform}-x86.#{extension}</tt></td>
+  </tr>
+</table>
+
+#### uru::unix
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Acceptable Values</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['uru']['unix']['extract_path']</tt></td>
+    <td>String</td>
+    <td>Directory in your $PATH to extract uru_rt executable</td>
+    <td></td>
+    <td><tt>/home/#{node['uru']['username']}/bin</tt></td>
   </tr>
 </table>
 

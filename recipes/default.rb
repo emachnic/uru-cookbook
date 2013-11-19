@@ -19,3 +19,6 @@ when 'mac_os_x'
 when 'windows'
   include_recipe 'uru::windows'
 end
+
+include_recipe 'uru::install'
+

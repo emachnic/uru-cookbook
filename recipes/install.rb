@@ -2,10 +2,11 @@
 # recipe: install
 
 bash 'install_uru' do
+  cwd  node['uru']['home_dir']
+  user node['uru']['username']
   code <<-EOH
-    echo 'eval "$(uru_rt admin install)"' >> #{ENV['HOME']}/.bash_profile'
-    source #{ENV['HOME']}/.bash_profile
+    echo 'eval "$(uru_rt admin install)"' >> .bash_profile
     EOH
   action :run
-  not_if "cat #{ENV['HOME']}/.bash_profile | grep 'eval \"$(uru_rt admin install)\"'"
+  not_if "cat .bash_profile | grep 'eval \"$(uru_rt admin install)\"'"
 end
