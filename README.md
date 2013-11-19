@@ -11,6 +11,9 @@ on Windows, Mac, or Linux.
 Requirements
 ------------
 
+This cookbook currently runs on Debian- or RHEL-based systems that use Bash in
+the terminal.
+
 Attributes
 ----------
 #### uru::default
