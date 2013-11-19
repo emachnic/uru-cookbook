@@ -1,2 +1,2 @@
-foodcritic: bundle exec foodcritic . -f any
+foodcritic: foodcritic .
 chefspec:   bundle exec rspec -f documentation --color
