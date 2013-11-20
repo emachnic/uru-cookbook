@@ -1,0 +1,117 @@
+{
+  "name": "uru",
+  "description": "Installs/Configures uru",
+  "long_description": "uru Cookbook\n============\n\nThis cookbook installs Uru, which is a cross-platform Ruby switcher. Uru runs\non Windows, Mac, or Linux.\n\n## CI\n\n[![Build Status](https://travis-ci.org/emachnic/uru-cookbook.png)](https://travis-ci.org/emachnic/uru-cookbook?branch=master)\n\nRequirements\n------------\n\nThis cookbook currently runs on Debian- or RHEL-based systems that use Bash in\nthe terminal.\n\nAttributes\n----------\n#### uru::default\n<table>\n  <tr>\n    <th>Key</th>\n    <th>Type</th>\n    <th>Description</th>\n    <th>Acceptable Values</th>\n    <th>Default</th>\n  </tr>\n  <tr>\n    <td><tt>['uru']['username']</tt></td>\n    <td>String</td>\n    <td>Username that Uru will run under</td>\n    <td></td>\n    <td></td>\n  </tr>\n  <tr>\n    <td><tt>['uru']['home_dir']</tt><td>\n    <td>String</td>\n    <td>User's home directory. Different based on platform.</td>\n    <td></td>\n    <td></td>\n  </tr>\n  <tr>\n    <td><tt>['uru']['action']</tt></td>\n    <td>String</td>\n    <td>Way to run the cookbook.</td>\n    <td><tt>install</tt>, <tt>upgrade</tt></td>\n    <td><tt>install</tt></td>\n  </tr>\n  <tr>\n    <td><tt>['uru']['version']</tt></td>\n    <td>String</td>\n    <td>Version of Uru to install</td>\n    <td></td>\n    <td><tt>0.6.4</tt></td>\n  </tr>\n  <tr>\n    <td><tt>['uru']['src_url']</tt></td>\n    <td>String</td>\n    <td>Base URL for Uru downloads</td>\n    <td></td>\n    <td><tt>http://downloads.sourceforge.net/project/urubinaries/uru/#{node['uru']['version']}/</tt></td>\n  </tr>\n  <tr>\n    <td><tt>['uru']['src_filename']</tt></td>\n    <td>String</td>\n    <td>Filename of the Uru binary package</td>\n    <td></td>\n    <td><tt>uru-#{node['uru']['version']}-#{platform}-x86.#{extension}</tt></td>\n  </tr>\n</table>\n\nUsage\n-----\nJust include `uru` in your node's `run_list`:\n\n```json\n{\n  \"name\":\"my_node\",\n  \"run_list\": [\n    \"recipe[uru]\"\n  ]\n}\n```\n\nContributing\n------------\n\n1. Fork the repository on Github\n2. Create a named feature branch (like `add_component_x`)\n3. Write you change\n4. Write tests for your change (if applicable)\n5. Run the tests, ensuring they all pass\n6. Submit a Pull Request using Github\n\nAuthors\n-------------------\n- **Uru Cookbook**: Evan Machnic\n- **Uru**: Jon Maken\n",
+  "maintainer": "Evan Machnic",
+  "maintainer_email": "emachnic@gmail.com",
+  "license": "All rights reserved",
+  "platforms": {
+  },
+  "dependencies": {
+    "tar": "~> 0.0.4"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+    "uru/username": {
+      "display_name": "Uru Username",
+      "description": "Username that Uru will run under",
+      "type": "string",
+      "required": "required",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "uru/home_dir": {
+      "display_name": "Uru Home Directory",
+      "description": "Home directory of the Uru Username",
+      "type": "string",
+      "required": "required",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "uru/action": {
+      "display_name": "Uru Action",
+      "description": "Way to run the Uru cookbook",
+      "type": "string",
+      "choice": [
+        "install",
+        "upgrade"
+      ],
+      "required": "required",
+      "default": "install",
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "uru/version": {
+      "display_name": "Uru Version",
+      "description": "Version of Uru to install",
+      "type": "string",
+      "required": "required",
+      "default": "0.6.4",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "uru/src_url": {
+      "display_name": "Uru Source URL",
+      "description": "URL for Uru downloads",
+      "type": "string",
+      "required": "required",
+      "default": "http://downloads.sourceforge.net/project/urubinaries/uru/#{node[\"uru\"][\"version\"]}/",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "recipes": [
+
+      ]
+    },
+    "uru/src_filename": {
+      "display_name": "Uru Source Filename",
+      "description": "Filename of the Uru binary package",
+      "type": "string",
+      "required": "required",
+      "default": "uru-#{node[\"uru\"][\"version\"]}-#{platform}-x86.#{extension}",
+      "choice": [
+
+      ],
+      "calculated": false,
+      "recipes": [
+
+      ]
+    }
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "uru": "Downloads the Uru binary for the server platform and installs in specified directory",
+    "uru::unix": "Downloads the Uru binary archive and unpacks the \"uru_rt\" executable file",
+    "uru::install": "Installs Uru depending on the platform",
+    "uru::upgrade": "Removes the old \"uru_rt\" executable if found"
+  },
+  "version": "0.2.0"
+}

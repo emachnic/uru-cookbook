@@ -92,6 +92,7 @@ Contributing
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request using Github
 
-License and Authors
+Authors
 -------------------
-Authors: Evan Machnic
+- **Uru Cookbook**: Evan Machnic
+- **Uru**: Jon Maken
