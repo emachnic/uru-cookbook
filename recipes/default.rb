@@ -12,10 +12,8 @@ if node['uru']['action'] == 'upgrade'
 end
 
 case node['platform_family']
-when 'debian', 'rhel'
+when 'debian', 'rhel', 'mac_os_x'
   include_recipe 'uru::unix'
-when 'mac_os_x'
-  include_recipe 'uru::mac'
 when 'windows'
   include_recipe 'uru::windows'
 end

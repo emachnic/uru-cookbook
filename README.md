@@ -33,6 +33,13 @@ Attributes
     <td></td>
   </tr>
   <tr>
+    <td><tt>['uru']['home_dir']</tt><td>
+    <td>String</td>
+    <td>User's home directory. Different based on platform.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
     <td><tt>['uru']['action']</tt></td>
     <td>String</td>
     <td>Way to run the cookbook.</td>
@@ -59,24 +66,6 @@ Attributes
     <td>Filename of the Uru binary package</td>
     <td></td>
     <td><tt>uru-#{node['uru']['version']}-#{platform}-x86.#{extension}</tt></td>
-  </tr>
-</table>
-
-#### uru::unix
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Acceptable Values</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['uru']['unix']['extract_path']</tt></td>
-    <td>String</td>
-    <td>Directory in your $PATH to extract uru_rt executable</td>
-    <td></td>
-    <td><tt>/home/#{node['uru']['username']}/bin</tt></td>
   </tr>
 </table>
 

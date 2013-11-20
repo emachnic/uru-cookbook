@@ -46,12 +46,8 @@ describe 'uru::default' do
       ChefSpec::Runner.new(platform: 'mac_os_x', version: '10.8.2').converge(described_recipe)
     end
 
-    it 'includes the mac recipe' do
-      expect(chef_run).to include_recipe('uru::mac')
-    end
-
-    it "doesn't include the unix recipe" do
-      expect(chef_run).to_not include_recipe('uru::unix')
+    it 'includes the unix recipe' do
+      expect(chef_run).to include_recipe('uru::unix')
     end
 
     it "doesn't include the windows recipe" do

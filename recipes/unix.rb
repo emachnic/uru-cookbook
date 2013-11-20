@@ -1,5 +1,6 @@
 src_filepath = "#{node['uru']['src_url']}#{node['uru']['src_filename']}"
-extract_path = node['uru']['unix']['extract_path']
+
+extract_path = "#{node['uru']['home_dir']}/bin"
 
 directory extract_path do
   action :create
